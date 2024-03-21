@@ -1,0 +1,103 @@
+:root{
+    --cellColor: dodgerblue;
+
+}
+h1{
+    color: orangered;
+    margin-bottom: -5px;
+}
+p{
+    margin-bottom: -10px;
+}
+.ui{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+}
+.cell{
+    border: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.cell:active{
+    outline: none;
+}
+/* 3*3 Grid */
+#b1{
+    border-bottom: 2px solid var(--cellColor);
+    border-right: 2px solid var(--cellColor);
+}
+#b2{
+    border-bottom: 2px solid var(--cellColor);
+    border-right: 2px solid var(--cellColor);
+    border-left: 2px solid var(--cellColor);
+}
+#b3{
+    border-bottom: 2px solid var(--cellColor);
+    border-left: 2px solid var(--cellColor);
+}
+#b4{
+    border-top: 2px solid var(--cellColor);
+    border-bottom: 2px solid var(--cellColor);
+    border-right: 2px solid var(--cellColor);
+}
+#b5{
+    border: 2px solid var(--cellColor);
+}
+#b6{
+    border-bottom: 2px solid var(--cellColor);
+    border-left: 2px solid var(--cellColor);
+    border-top: 2px solid var(--cellColor);
+}
+#b7{
+    border-top: 2px solid var(--cellColor);
+    border-right: 2px solid var(--cellColor);
+}
+#b8{
+    border-top: 2px solid var(--cellColor);
+    border-right: 2px solid var(--cellColor);
+    border-left: 2px solid var(--cellColor);
+}
+#b9{
+    border-left: 2px solid var(--cellColor);
+    border-top: 2px solid var(--cellColor);
+}
+/* Reset button */
+#but{
+    box-sizing: border-box;
+    width: 95px;
+    height: 40px;
+    border: 1px solid gray;
+    margin-left: auto;
+    border-radius: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+    color: gray;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* Player turn space */
+#print{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    font-size: 30px;
+}
+/* Main Container */
+#main{
+    text-align: center;
+}
+/* Game Instruction Text */
+#ins{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+}
