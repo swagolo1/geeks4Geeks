@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dragon World</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+        <h1 id="gameName">Welcome to Dragon's world</h1>
+        <div class="gameover">Game Over</div>
+        <button id="resetG" onclick="resetGame()">Restart Game</button>
+        <div id="scorecount">Your score: 0</div>
+        <div class="obstacle animateobstacle"></div>
+        <div class="dragon " style="left: 426px;"></div>    
+    </div>
 </body>
 </html>

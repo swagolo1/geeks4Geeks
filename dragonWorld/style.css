@@ -1,0 +1,146 @@
+/* CSS Reset  */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    /* Hides the bottom scrollbar */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Styling the Games's Name */
+#gameName{
+    position: absolute;
+    /* top: 10vh;
+    left: 10vh; */
+    background-color: wheat;
+    border-radius: 10%;
+    padding: 28px;
+    overflow: hidden;
+    
+}
+
+#resetG{
+    position: absolute;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 4px 2px;
+    top: 120px;
+    right: 20px;
+    font-family: 'Ubunru', sans-serif;
+    font-weight: bold;
+    width: 15%;
+
+}
+
+/* Background image styling */
+.container{
+    position: relative;
+}
+.container::before{
+    background-image: url("https://github.com/SAEb-ai/Dragon-s-World-Game/blob/main/images/cover.png?raw=true");
+    background-size: cover;
+    width: 200vh;
+    height: 100vh;
+    opacity: 0.4;
+    position: absolute;
+    display: block;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    content: '';
+}
+/* ScoredCard Styling */
+#scorecount{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+    padding: 28px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+
+}
+/* Obstacle image styling and position */
+.obstacle {
+    background-image: url("https://github.com/SAEb-ai/Dragon-s-World-Game/blob/main/images/obstacle.png?raw=true");
+    background-size: cover;
+    width: 154px;
+    height: 126px;
+    position:fixed;
+    bottom: 0px;
+    right: 120px;
+    background-color: white;
+}
+/* Appling animation to the obstacle -> moves left */
+
+.animateobstacle{
+    animation: aniob 5s linear infinite;
+}
+@keyframes aniob{
+    0% {
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+/* Dragon's styling */
+.dragon{
+    background-image: url("https://github.com/SAEb-ai/Dragon-s-World-Game/blob/main/images/dragon.png?raw=true");
+    background-size: cover;
+    width: 194px;
+    height: 126px;
+    position: fixed;
+    bottom: 0px;
+    left: 90px;
+    background-color: white;
+}
+
+/* Applying animation to the dragon ->saves itself by jumping */
+.animatedragon{
+    animation: ani 1s linear;
+}
+
+@keyframes ani{
+    0%{
+        bottom: 0px;
+    }
+    25%{
+        bottom: 150px;
+    }
+    50%{
+        bottom: 300px;
+    }
+    75%{
+        bottom: 200px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+/* gameover styling and positioning */
+.gameover{
+    visibility: hidden;
+    font-family: 'Ubunru', sans-serif;
+    position: relative;
+    top: 50vh;
+    left: 35vw;
+    width: 34%;
+    font-weight: bold;
+    font-size: 6rem;
+    background-color: firebrick;
+    border-radius: 20px;
+}
