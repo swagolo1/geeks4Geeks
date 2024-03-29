@@ -73,20 +73,27 @@ const imagesLinkArray = [
 const restartGame = () => {
     let toggledCard = document.getElementsByClassName('card toggled');
     imagesLinkArray.sort(() => Math.random() - 0.5);
+    console.log(imagesLinkArray)
     Object.values(toggledCard).forEach(function (el){
         setTimeout(() => {
             el.classList.remove("toggled");
         }, 0);
     })
     toggledCardsArray.length = 0;
+    
     move = 0;
+    
     winCount = 0;
+    
     movesDisplay.innerText = `Moves: ${move}`;
+    
     let allImagesSrc = document.getElementsByClassName('card-image');
-    Object.values(allImagesSrc-1).forEach((el, index)=>{
-        el.id = imagesLinkArray[index].id;
+    //solving bug by substracting -1 from allImagesSrc
+    //but it removes randomisation
+    Object.values(allImagesSrc).forEach((el, index)=>{
         el.src = imagesLinkArray[index].image;
         el.alt = imagesLinkArray[index].newAlt;
+        el.id = imagesLinkArray[index].id;
     })
 }
 restart.addEventListener('click', restartGame);
@@ -111,7 +118,7 @@ for (var i = 0; i < cards.length; i++){
         //getting the img src of the card selected
         let thisImgSrc = this.querySelector('.card-image').src;
         
-        if (countCardOrder == 2){
+        // if (countCardOrder == 2){
 
             //getting the previous card
             let previousImgSrc = toggledCardsArray[toggledCardsArray.length - 2].querySelector('.card-image').src;
@@ -130,7 +137,7 @@ for (var i = 0; i < cards.length; i++){
             }
             move++;
             countCardOrder = 0;
-        }
+        // }
 
         movesDisplay.innerHTML = `Moves: ${move}`;
 
