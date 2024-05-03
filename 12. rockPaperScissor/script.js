@@ -25,8 +25,8 @@ const game = () => {
 
                 // func check who wins
                 winner(this.innerText, computerChoice);
-                console.log('me: ' + this.innerText);
-                console.log('pc: ' + computerChoice);
+                // console.log('me: ' + this.innerText);
+                // console.log('pc: ' + computerChoice);
                 // calling gameOver after 10 moves
                 if(moves == 10){
                     gameOver(playerOptions, movesLeft);
@@ -52,33 +52,33 @@ const game = () => {
         }
         else if( player == 'rock'){
             if( computer == 'paper'){
-                result.textContent = 'computer Won';
+                result.textContent = 'computer won';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
             }else{
-                result.textContent = 'Player won';
+                result.textContent = 'player won';
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
             }
         }
         else if( player == 'scissor'){
             if( computer == 'rock'){
-                result.textContent = 'computer Won';
+                result.textContent = 'computer won';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
             }else{
-                result.textContent = 'Player won';
+                result.textContent = 'player won';
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
             }
         }
         else if( player == 'paper'){
             if( computer == 'scissor'){
-                result.textContent = 'computer Won';
+                result.textContent = 'computer won';
                 computerScore++;
                 computerScoreBoard.textContent = computerScore;
             }else{
-                result.textContent = 'Player won';
+                result.textContent = 'player won';
                 playerScore++;
                 playerScoreBoard.textContent = playerScore;
             }
