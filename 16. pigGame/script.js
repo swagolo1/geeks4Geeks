@@ -80,7 +80,7 @@ btnHold.addEventListener('click', function () {
     });
 
 // Starting conditions
-const init = function () {
+btnNew.addEventListener('click', function () {
     scores = [0, 0];
     currentScore = 0;
     activePlayer = 0;
@@ -99,7 +99,7 @@ const init = function () {
     player0El.classList.add('player--active');
     
     player1El.classList.remove('player--active');
-};
+});
 
-init();
+// init();
     

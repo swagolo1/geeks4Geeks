@@ -1,0 +1,11 @@
+* { 
+    font-family: 'Yeon Sung', cursive;
+    /* border: 1px black dotted; */
+} 
+
+input { 
+    width: 60px; 
+    height: 40px; 
+    border-radius: 5px; 
+    text-align: center; 
+} 
