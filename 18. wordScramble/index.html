@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>word scramble</title>
 </head>
 <body>
-    
+    <div class="root"> 
+        <!-- header -->
+        <h1 class="title">Word Scramble Game</h1> 
+        <!-- content -->
+        <div id="scrambled"> 
+            <h2 id="scrambleWord">Word</h2> 
+            <p id="hint"></p> 
+        </div> 
+        <div id="form"> 
+            <input id="input" 
+                   type="text" 
+                   placeholder="Guess correct word" /> 
+        </div> 
+        <!-- footer -->
+        <h3 id="output">Result:</h3> 
+        <div class="foot"> 
+            <button type="button" 
+                    onclick="check()"> 
+                Check 
+            </button> 
+            <button type="button" 
+                    onclick="refresh()"> 
+                Refresh 
+            </button> 
+        </div> 
+        
+    </div> 
+
     <script src="script.js"></script>
 </body>
 </html>
